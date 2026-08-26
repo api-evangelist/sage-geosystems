@@ -1,8 +1,17 @@
 aid: sage-geosystems
 name: Sage Geosystems
-description: 'Sage Geosystems is a company surfaced via the API Evangelist harvest backlog (source: secondary-market)
-  and added to the network as a stub for full-pipeline profiling.'
+description: >-
+  Sage Geosystems is a Houston, Texas energy company developing "Pressure Geothermal" — an evolution
+  of traditional geothermal that applies subsurface breakthroughs from the oil and gas industry to
+  hot dry rock. Its two-well Power Generation system circulates water through engineered "lung"
+  fractures and extracts heat at surface through a heat exchanger driving an sCO2 turbine, while its
+  single-well EarthStore energy storage system charges and discharges over 8-hour to multi-day
+  timescales for long-duration storage. The company markets to utilities, data centers and
+  government partners rather than to developers: as of this profile it operates a seven-page
+  marketing site with no developer portal, public API, SDK, or machine-readable specification of any
+  kind.
 url: https://raw.githubusercontent.com/api-evangelist/sage-geosystems/refs/heads/main/apis.yml
+image: https://cdn.prod.website-files.com/67c84ff5859691041733b20c/67e6ff023d9f135d5a3f4b12_Sage-OG.png
 x-type: company
 x-source: harvest:secondary-market
 x-tier: stub
@@ -12,6 +21,12 @@ created: '2026-08-26'
 modified: '2026-08-26'
 tags:
 - Company
+- Energy
+- Geothermal
+- Energy Storage
+- Power Generation
+- Renewable Energy
+- Cleantech
 apis: []
 maintainers:
 - FN: Kin Lane
@@ -19,5 +34,53 @@ maintainers:
 - FN: APIs.json
   email: info@apis.io
 common:
+- type: DomainSecurity
+  url: security/sage-geosystems-domain-security.yml
 - type: Website
-  url: https://forgeglobal.com/sage-geosystems_stock/
+  url: https://www.sagegeosystems.com/
+- type: About
+  url: https://www.sagegeosystems.com/company
+- type: Blog
+  name: Newsroom
+  url: https://www.sagegeosystems.com/newsroom
+- type: Support
+  name: Contact
+  url: https://www.sagegeosystems.com/contact
+- type: TermsOfService
+  url: https://www.sagegeosystems.com/terms-of-use
+- type: PrivacyPolicy
+  url: https://www.sagegeosystems.com/privacy-policy
+- type: LinkedIn
+  url: https://www.linkedin.com/company/sage-geosystems
+- type: YouTube
+  url: https://www.youtube.com/@sagegeosystems
+- type: LLMsTxt
+  url: llms/sage-geosystems-llms.txt
+
+x-enrichment:
+  date: '2026-08-26'
+  status: minimal
+  artifacts_added: 3
+  pass: local-v1
+x-coverage:
+  state: none
+  reason: not-a-software-company
+  detail: >-
+    Sage Geosystems builds geothermal power generation and energy storage plants; its entire web
+    presence is a seven-page Webflow marketing site (home, technology, projects, company, newsroom,
+    contact, careers) with no developer, docs, or API path — /developers, /api, /docs, /openapi.json
+    and every /.well-known/* probe returned 404, and no GitHub organization exists under the name.
+  evidence:
+    - url: https://www.sagegeosystems.com/
+      status: 200
+    - url: https://www.sagegeosystems.com/developers
+      status: 404
+    - url: https://www.sagegeosystems.com/api
+      status: 404
+    - url: https://www.sagegeosystems.com/openapi.json
+      status: 404
+    - url: https://www.sagegeosystems.com/.well-known/agent-card.json
+      status: 404
+    - url: https://www.sagegeosystems.com/llms.txt
+      status: 404
+  checked: '2026-08-26'

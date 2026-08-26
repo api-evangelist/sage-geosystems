@@ -1,0 +1,41 @@
+generated: '2026-08-26'
+method: probed
+source: live GET of /.well-known/* on the Sage Geosystems corporate host
+note: >-
+  Every probed path returned 404. The host is a Webflow-published marketing site and answers
+  /.well-known/* with a genuine 404 body ("Invalid .well-known request", 88 bytes), so this is a
+  real absence rather than a soft-200 catch-all. No document was saved and NO WellKnown or
+  SecurityTxt pointer is emitted in apis.yml — this file records a measured absence, not a surface.
+hit_count: 0
+hosts:
+- host: https://www.sagegeosystems.com
+  documents:
+  - path: /.well-known/security.txt
+    status: 404
+  - path: /.well-known/openid-configuration
+    status: 404
+  - path: /.well-known/oauth-authorization-server
+    status: 404
+  - path: /.well-known/api-catalog
+    status: 404
+  - path: /.well-known/ai-plugin.json
+    status: 404
+  - path: /.well-known/agent-card.json
+    status: 404
+  - path: /.well-known/agent.json
+    status: 404
+x-evidence:
+  fetched: '2026-08-26'
+  soft_404_control:
+    path: /.well-known/agent-card.json
+    status: 404
+    bytes: 88
+    body_kind: html-404
+  contract_discovery:
+  - {url: 'https://www.sagegeosystems.com/openapi.json', status: 404}
+  - {url: 'https://www.sagegeosystems.com/swagger.json', status: 404}
+  - {url: 'https://www.sagegeosystems.com/api', status: 404}
+  - {url: 'https://www.sagegeosystems.com/docs', status: 404}
+  - {url: 'https://www.sagegeosystems.com/developers', status: 404}
+  - {url: 'https://www.sagegeosystems.com/llms.txt', status: 404}
+  - {url: 'https://www.sagegeosystems.com/sitemap.xml', status: 404}
