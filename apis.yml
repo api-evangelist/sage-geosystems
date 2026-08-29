@@ -11,6 +11,17 @@ description: >-
   marketing site with no developer portal, public API, SDK, or machine-readable specification of any
   kind.
 url: https://raw.githubusercontent.com/api-evangelist/sage-geosystems/refs/heads/main/apis.yml
+deliveryModel:
+  model: saas
+  open_source: false
+  commercial: true
+  callable_host: false
+  label: Hosted service · you call their endpoint
+  confidence: medium
+  source:
+  - pricing
+  generated: '2026-08-28'
+  method: derived
 image: https://cdn.prod.website-files.com/67c84ff5859691041733b20c/67e6ff023d9f135d5a3f4b12_Sage-OG.png
 x-type: company
 x-source: harvest:secondary-market
